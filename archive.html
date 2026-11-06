@@ -87,6 +87,7 @@
 <div class="box">
 <div class="disc"></div>
 <img src="mutter.jpg" alt="mutter" class="cover">
+<audio src="mutter.mp3" preload="none"></audio>
 </div>
 <p class="albumname">MUTTER</p>
 <p class="albumyear">2001</p>
@@ -96,6 +97,7 @@
         <div class="box">
             <div class="disc"></div>
             <img src="sehnsucht.jpg" alt="Sehnsucht" class="cover">
+        <audio src="sehnsucht.mp3" preload="none"></audio>
         </div>
         <p class="albumname">SEHNSUCHT</p>
         <p class="albumyear">1997</p>
@@ -105,6 +107,7 @@
         <div class="box">
             <div class="disc"></div>
             <img src="reise.jpg" alt="Reise, Reise" class="cover">
+            <audio src="reise.mp3" preload="none"></audio>
         </div>
         <p class="albumname">REISE, REISE</p>
         <p class="albumyear">2004</p>
@@ -114,6 +117,7 @@
         <div class="box">
             <div class="disc"></div>
             <img src="liebe.jpg" alt="Liebe ist für alle da" class="cover">
+            <audio src="liebe.mp3" preload="none"></audio>
         </div>
         <p class="albumname">LIEBE IST FÜR ALLE DA</p>
         <p class="albumyear">2009</p>
@@ -123,6 +127,7 @@
         <div class="box">
             <div class="disc"></div>
             <img src="zeit.jpg" alt="Zeit" class="cover">
+            <audio src="zeit.mp3" preload="none"></audio>
         </div>
         <p class="albumname">ZEIT</p>
         <p class="albumyear">2022</p>
@@ -143,7 +148,22 @@ document.addEventListener("click", function(){
 music.play();
 }, {once: true}); 
 });
+const boxes= document.querySelectorAll(".box");
+boxes.forEach(function(box){
+    const song = box.querySelector("audio");
+    if (!song)
+    return;
+box.addEventListener("mouseenter",function(){
+    music.pause();
+    song.play();
+});
+box.addEventListener("mouseleave",function(){
+    song.pause();
+    song.currentTime=0;
+    music.play();
 
+});
+});
     </script>
 </body>
 </html>
