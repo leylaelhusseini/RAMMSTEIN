@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARCHIVE</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <audio id="engel" src="engel.mp3" loop></audio>
+    <section class="main">
+<div class="hero">
+    <video src="concert.mp4" autoplay muted loop playsinline disablepictureinpicture></video>
+</div>
+    <h1 class="title">RAMMSTEIN</h1>
+<p class="def">A German industrial metal band formed in Berlin in 1994.
+        <br>
+        <a href="#till">Till Lindemann.</a> <a href="#richard">Richard Kruspe.</a> <a href="#paul">Paul Landers.</a> <a href="#oliver">Oliver Riedel.</a> <a href="#christoph">Christoph Schneider.</a> <a href="#flake">Christian Lorenz.</a>
+            </p>
+        </section>
+
+<div class="slider">
+<section class="member" id="till">
+<img class="memberphoto" src="till.png" alt="Till Lindemann">
+<div class="membtext">
+<h2 class="membname">TILL LINDEMANN</h2>
+<h3 class="role">Lead Vocalist</h3>
+<h3 class="birth">Born in January 4 1963</h3>
+<p class="membinfo">The unmistakable voice of Rammstein. Known for his deep vocals, dark poetic lyrics and commanding stage presence.</p>
+</div>
+</section>
+
+<section class="member" id="richard">
+    <img class="memberphoto" src="richard.png" alt="Richard Kruspe">
+    <div class="membtext">
+        <h2 class="membname">RICHARD KRUSPE</h2>
+        <h3 class="role">Lead Guitarist</h3>
+        <h3 class="birth">Born on June 24, 1967</h3>
+        <p class="membinfo">The driving force behind many of Rammstein's signature guitar riffs. He also founded the alternative metal project Emigrate.</p>
+    </div>
+</section>
+
+<section class="member" id="paul">
+    <img class="memberphoto" src="paul.png" alt="Paul Landers">
+    <div class="membtext">
+        <h2 class="membname">PAUL LANDERS</h2>
+        <h3 class="role">Rhythm Guitarist</h3>
+        <h3 class="birth">Born on December 9, 1964</h3>
+        <p class="membinfo">Responsible for Rammstein's powerful rhythm guitar. Before joining the band, he was a member of the East German band Feeling B.</p>
+    </div>
+</section>
+
+<section class="member" id="oliver">
+    <img class="memberphoto" src="oliver.png" alt="Oliver Riedel">
+    <div class="membtext">
+        <h2 class="membname">OLIVER RIEDEL</h2>
+        <h3 class="role">Bassist</h3>
+        <h3 class="birth">Born on April 11, 1971</h3>
+        <p class="membinfo">Known for his deep bass lines, Oliver provides the rhythmic foundation beneath Rammstein's heavy sound. He previously played with The Inchtabokatables.</p>
+    </div>
+</section>
+
+<section class="member" id="christoph">
+    <img class="memberphoto" src="christoph.png" alt="Christoph Schneider">
+    <div class="membtext">
+        <h2 class="membname">CHRISTOPH SCHNEIDER</h2>
+        <h3 class="role">Drummer</h3>
+        <h3 class="birth">Born on May 11, 1966</h3>
+        <p class="membinfo">Known by his nickname "Doom", Christoph delivers the precise and powerful percussion that drives Rammstein's music.</p>
+    </div>
+</section>
+
+<section class="member" id="flake">
+    <img class="memberphoto" src="flake.png" alt="Christian Flake Lorenz">
+    <div class="membtext">
+        <h2 class="membname">CHRISTIAN "FLAKE" LORENZ</h2>
+        <h3 class="role">Keyboardist</h3>
+        <h3 class="birth">Born on November 16, 1966</h3>
+        <p class="membinfo">Known as Flake, he creates the synthesizer melodies and electronic arrangements that give Rammstein its distinctive industrial sound.</p>
+    </div>
+</section>
+</div>
+
+<h2 class="albumstitle">TOP 5 ALBUMS</h2>
+<section class="albums">
+<div class="album">
+<div class="box">
+<div class="disc"></div>
+<img src="mutter.jpg" alt="mutter" class="cover">
+</div>
+<p class="albumname">MUTTER</p>
+<p class="albumyear">2001</p>
+</div>
+
+<div class="album">
+        <div class="box">
+            <div class="disc"></div>
+            <img src="sehnsucht.jpg" alt="Sehnsucht" class="cover">
+        </div>
+        <p class="albumname">SEHNSUCHT</p>
+        <p class="albumyear">1997</p>
+    </div>
+
+    <div class="album">
+        <div class="box">
+            <div class="disc"></div>
+            <img src="reise.jpg" alt="Reise, Reise" class="cover">
+        </div>
+        <p class="albumname">REISE, REISE</p>
+        <p class="albumyear">2004</p>
+    </div>
+
+    <div class="album">
+        <div class="box">
+            <div class="disc"></div>
+            <img src="liebe.jpg" alt="Liebe ist für alle da" class="cover">
+        </div>
+        <p class="albumname">LIEBE IST FÜR ALLE DA</p>
+        <p class="albumyear">2009</p>
+    </div>
+
+    <div class="album">
+        <div class="box">
+            <div class="disc"></div>
+            <img src="zeit.jpg" alt="Zeit" class="cover">
+        </div>
+        <p class="albumname">ZEIT</p>
+        <p class="albumyear">2022</p>
+    </div>
+
+    
+</section>
+
+
+
+
+
+
+<script>
+const music= document.getElementById("engel");
+music.play().catch(function(){
+document.addEventListener("click", function(){
+music.play();
+}, {once: true}); 
+});
+
+    </script>
+</body>
+</html>
