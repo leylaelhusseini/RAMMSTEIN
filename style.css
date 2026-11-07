@@ -182,7 +182,6 @@ html{
 .slider{
     display: flex;
     gap:5%;
-    margin: 60px 5% 40px;
 overflow-x: auto;
 scroll-snap-type: x mandatory;
 scrollbar-width: none;
@@ -196,7 +195,6 @@ scrollbar-width: none;
 .albums{
     display: flex;
     flex-wrap: wrap;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
 gap: clamp(40px, 5vw, 60px) /*row gap*/ clamp(50px, 7vw, 90px);/*column gap*/
 margin: 40px 5% 100px;
 justify-content: center;
@@ -248,7 +246,7 @@ position: absolute;
 }
 .albumname{
     font-family:Arial, Helvetica, sans-serif;
-    font-size: clamp(1rem, 1.6vw, 1.5rem)
+    font-size: clamp(1rem, 1.6vw, 1.5rem);
 }
 .albumyear{
     font-size: 1rem;
@@ -256,4 +254,82 @@ position: absolute;
 .album{
     text-align: center;
     width: clamp(200px, 22vw, 260px);
+}
+.wrap{
+    position: relative;
+    margin: 60px 5% 40px;
+}
+.arrow{
+    position:absolute;
+    width: 45px;
+    height: 45px;
+    z-index:5;
+    cursor: url('rtill.png'), pointer;
+    font-size: 1.5rem;
+    background: rgba(0, 0, 0, 0.7);
+    top: 50%;
+    border:2px solid #111;
+    transform: translateY(-50%);
+    transition: background 0.5s, color 0.5s;
+color: #999;
+}
+.arrow-left{
+    left:0;
+}
+.arrow-right{
+    right:0;
+}
+.arrow:hover{
+    background: #1c1c1c;
+    color:#a4a3a3;
+}
+@media(max-width: 700px){
+    .title{
+        top:50%
+    }
+    .def{
+      top:auto;
+      bottom:0;
+      font-size:0.9rem;  
+    }
+    .member{
+        height: auto;
+        flex-direction: column;
+margin: 20px 0;
+        min-height: 0;
+    }
+.memberphoto{
+    align-self: center;
+        flex: none;
+        height: auto;
+        width: 65%;
+    }
+  .membtext{
+        flex: none;
+        align-self: stretch;
+        padding: 20px;
+    }
+      .arrow{
+        width: 34px;
+        height: 34px;
+        font-size: 1rem;
+    }
+
+    .albums{
+        gap: 40px 20px;
+    }
+    .album{
+        width: 42vw;
+    }
+    .albumname{
+        font-size: 0.95rem;
+    }
+
+}
+
+
+@media(hover:none){
+    .disc{
+        left:20%;
+    }
 }

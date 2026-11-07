@@ -18,7 +18,8 @@
         <a href="#till">Till Lindemann.</a> <a href="#richard">Richard Kruspe.</a> <a href="#paul">Paul Landers.</a> <a href="#oliver">Oliver Riedel.</a> <a href="#christoph">Christoph Schneider.</a> <a href="#flake">Christian Lorenz.</a>
             </p>
         </section>
-
+<div class="wrap">
+<button class="arrow arrow-left" >←</button>
 <div class="slider">
 <section class="member" id="till">
 <img class="memberphoto" src="till.png" alt="Till Lindemann">
@@ -79,6 +80,8 @@
         <p class="membinfo">Known as Flake, he creates the synthesizer melodies and electronic arrangements that give Rammstein its distinctive industrial sound.</p>
     </div>
 </section>
+</div>
+ <button class="arrow arrow-right" >→</button>
 </div>
 
 <h2 class="albumstitle">TOP 5 ALBUMS</h2>
@@ -164,6 +167,18 @@ box.addEventListener("mouseleave",function(){
 
 });
 });
+const slider = document.querySelector(".slider");
+const members=document.querySelectorAll(".member")
+function slideNB(){
+    return members[1].offsetLeft - members[0].offsetLeft;
+}
+document.querySelector(".arrow-right").addEventListener("click",function(){
+    slider.scrollBy({ left: slideNB(), behavior: "smooth" });
+});
+document.querySelector(".arrow-left").addEventListener("click", function(){
+    slider.scrollBy({left:-slideNB(), behavior:"smooth"});
+});
+   
     </script>
 </body>
 </html>
